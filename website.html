@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>instituut Neuville</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <!-- Navigatie -->
+    <nav class="navbar">
+        <div class="logo">Instituut Neuville</div>
+        <ul class="nav-links">
+            <li><a href="#about">Over Ons</a></li>
+            <li><a href="#services">Diensten</a></li>
+            <li><a href="#booking">Boek Afspraak</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#map">Locatie</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero">
+        <img src="img/instutuut neuville.jpg" alt="Hero Afbeelding" class="hero-image">
+        <a href="#services" class="cta-button">Bekijk Onze Diensten</a>
+    </header>
+       
+
+    <!-- Over Ons -->
+    <section id="about" class="section">
+        <h2>Over Ons</h2>
+        <p>Welkom bij Schoonheids instituut Neuville! Hier krijgt u de beste gezichtsbehandelingen, massages, en nog veel meer. Laat ons uw natuurlijke schoonheid versterken.</p>
+    </section>
+
+    <!-- Diensten -->
+    <section id="services" class="section">
+        <h2>Onze Diensten en Prijzen</h2>
+        <div class="services-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Dienst</th>
+                        <th>Beschrijving</th>
+                        <th>Prijs</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Gezichtsbehandeling</td>
+                        <td>Een luxe behandeling die uw huid verfrist en revitaliseert.</td>
+                        <td>€50</td>
+                    </tr>
+                    <tr>
+                        <td>Dieptereiniging</td>
+                        <td>Een grondige reiniging van de poriën voor een stralende huid.</td>
+                        <td>€65</td>
+                    </tr>
+                    <tr>
+                        <td>Ontspanningsmassage</td>
+                        <td>30 minuten pure ontspanning en spierontspanning.</td>
+                        <td>€40</td>
+                    </tr>
+                    <tr>
+                        <td>Pedicure</td>
+                        <td>Professionele voetverzorging inclusief lakken.</td>
+                        <td>€30</td>
+                    </tr>
+                    <tr>
+                        <td>Manicure</td>
+                        <td>Perfect verzorgde handen en nagels met luxe producten.</td>
+                        <td>€25</td>
+                    </tr>
+                    <tr>
+                        <td>Wenkbrauw Styling</td>
+                        <td>Shapen, verven, en perfectioneren van uw wenkbrauwen.</td>
+                        <td>€20</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Boeking -->
+    <section id="booking" class="section">
+        <h2>Boek een Afspraak</h2>
+        <form id="booking-form" class="booking-form">
+            <label for="name">Naam:</label>
+            <input type="text" id="name" name="name" placeholder="Uw naam" required>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" placeholder="Uw e-mail" required>
+            <label for="service">Dienst:</label>
+            <select id="service" name="service" required>
+                <option value="facial">Gezichtsbehandeling</option>
+                <option value="massage">Massage</option>
+                <option value="manicure">Manicure & Pedicure</option>
+            </select>
+            <label for="date">Datum:</label>
+            <input type="date" id="date" name="date" required>
+            <button type="submit">Verzend</button>
+        </form>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+        <h2>Contact</h2>
+        <p>Heeft u vragen? Neem gerust contact met ons op via:</p>
+        <p>E-mail: info@elegance.com</p>
+        <p>Telefoon: 012-3456789</p>
+    </section>
+
+    <!-- Locatie -->
+    <section id="map" class="section">
+        <h2>Onze Locatie</h2>
+        <p>Bezoek ons op onze locatie in het hart van de stad:</p>
+        <iframe 
+            src="https://www.google.com/maps/place/Instituut+Neuville/@51.1227625,3.0595445,17z/data=!3m1!4b1!4m6!3m5!1s0x47c34d7f295043e7:0xb879bbb3ab8f99cd!8m2!3d51.1227592!4d3.0621194!16s%2Fg%2F11tn_d6997?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoJLDEwMjExMjMzSAFQAw%3D%3D" 
+            width="100%" 
+            height="450" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Elegance Schoonheidssalon. Alle rechten voorbehouden.</p>
+        <div class="social-icons">
+            <a href="#"><img src="img/facebook-icon.png" alt="Facebook"></a>
+            <a href="#"><img src="img/instagram-icon.png" alt="Instagram"></a>
+        </div>
+    </footer>
+</body>
+</html>
