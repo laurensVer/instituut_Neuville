@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>instituut Neuville</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <script defer src="script.js"></script>
+    <style>
+         .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .prijslijst {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .prijslijst h1 {
+            font-size: 36px;
+            grid-column: span 2;
+            margin-bottom: 20px;
+        }
+        @media (min-width: 1200px) {
+        .prijslijst {
+        grid-template-columns: repeat(3, 1fr); /* Bij grotere schermen drie gelijke kolommen */
+        }
+
+        .prijslijst h1 {
+        grid-column: span 3; /* Titel neemt de volledige breedte in op grote schermen */
+        }
+        }
+
+        .prijslijst .categorie {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .prijslijst .categorie h2 {
+            font-size: 24px;
+            border-bottom: 1px solid #ccc;
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+        }
+
+        .prijslijst .item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .prijslijst .item span {
+            display: inline-block;
+        }
+
+        .prijslijst .item .prijs {
+            font-weight: bold;
+        }
+
+        .background {
+            background-image: url('img/achtergrond.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigatie -->
+    <nav class="navbar">
+        <div class="logo">Instituut Neuville</div>
+        <ul class="nav-links">
+            <li><a href="#about">Over Ons</a></li>
+            <li><a href="#services">Diensten</a></li>
+            <li><a href="#booking">Boek Afspraak</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero">
+        <img src="img/instutuut neuville.jpg" alt="Hero Afbeelding" class="hero-image">
+        <a href="#services" class="cta-button">Bekijk Onze Diensten</a>
+    </header>
+
+    <!-- Over Ons -->
+    <section id="about" class="section">
+        <h2>Over Ons</h2>
+        <p>Welkom bij Schoonheidsinstituut Neuville! Hier krijgt u de beste gezichtsbehandelingen, massages, en nog veel meer. Laat ons uw natuurlijke schoonheid versterken.</p>
+    </section>
+
+    <!-- Diensten -->
+    <section id="services" class="background">
+        <div class="prijslijst">
+            <h1>Prijslijst</h1>
+
+            <div class="categorie">
+                <h2>BODY</h2>
+                <div class="item">
+                    <span>Klassieke massage 25 min (rug,...)</span>
+                    <span class="prijs">&euro;20</span>
+                </div>
+                <div class="item">
+                    <span>Klassieke massage 55 min</span>
+                    <span class="prijs">&euro;50</span>
+                </div>
+                <div class="item">
+                    <span>Klassieke massage 85 min</span>
+                    <span class="prijs">&euro;80</span>
+                </div>
+            </div>
+
+            <div class="categorie">
+                <h2>EPILATIE</h2>
+                <div class="item">
+                    <span>Bovenlip</span>
+                    <span class="prijs">&euro;10</span>
+                </div>
+                <div class="item">
+                    <span>Wenkbrauwen</span>
+                    <span class="prijs">&euro;10</span>
+                </div>
+                <div class="item">
+                    <span>Kin</span>
+                    <span class="prijs">&euro;10</span>
+                </div>
+                <div class="item">
+                    <span>Volledige benen</span>
+                    <span class="prijs">&euro;20</span>
+                </div>
+                <div class="item">
+                    <span>Onderbenen + knieën</span>
+                    <span class="prijs">&euro;15</span>
+                </div>
+                <div class="item">
+                    <span>Bovenbenen</span>
+                    <span class="prijs">&euro;10</span>
+                </div>
+                <div class="item">
+                    <span>Oksels</span>
+                    <span class="prijs">&euro;10</span>
+                </div>
+                <div class="item">
+                    <span>Bikinilijn</span>
+                    <span class="prijs">&euro;20</span>
+                </div>
+            </div>
+
+            <div class="categorie">
+                <h2>FACE</h2>
+                <div class="item">
+                    <span>Gelaatsverzorging</span>
+                    <span class="prijs">&euro;35</span>
+                </div>
+                <div class="item">
+                    <span>Spa gelaatsverzorging</span>
+                    <span class="prijs">&euro;45</span>
+                </div>
+                <div class="item">
+                    <span>Luxe gelaatsverzorging</span>
+                    <span class="prijs">&euro;55</span>
+                </div>
+            </div>
+
+            <div class="categorie">
+                <h2>MAKE-UP</h2>
+                <div class="item">
+                    <span>Naturelle make-up</span>
+                    <span class="prijs">&euro;20</span>
+                </div>
+                <div class="item">
+                    <span>Avond make-up</span>
+                    <span class="prijs">&euro;30</span>
+                </div>
+            </div>
+
+            <div class="categorie">
+                <h2>LASHES</h2>
+                <div class="item">
+                    <span>Lashlift</span>
+                    <span class="prijs">&euro;50</span>
+                </div>
+                <div class="item">
+                    <span>Lashlift + kleuren</span>
+                    <span class="prijs">&euro;55</span>
+                </div>
+                <div class="item">
+                    <span>Kleuren van de wimpers</span>
+                    <span class="prijs">&euro;10</span>
+                </div>
+                <div class="item">
+                    <span>Kleuren wimpers + wenkbrauwen</span>
+                    <span class="prijs">&euro;20</span>
+                </div>
+            </div>
+
+            <div class="categorie">
+                <h2>BROWS</h2>
+                <div class="item">
+                    <span>Browlift</span>
+                    <span class="prijs">&euro;50</span>
+                </div>
+                <div class="item">
+                    <span>Kleuren van de wenkbrauwen</span>
+                    <span class="prijs">&euro;10</span>
+                </div>
+                <div class="item">
+                    <span>Epileer wenkbrauwen + kleuren</span>
+                    <span class="prijs">&euro;15</span>
+                </div>
+            </div>
+
+            <div class="categorie">
+                <h2>PEDICURE</h2>
+                <div class="item">
+                    <span>pedicure</span>
+                    <span class="prijs">&euro;30</span>
+                </div>
+                <div class="item">
+                    <span>lakken van de nagels</span>
+                    <span class="prijs">&euro;10</span>
+                </div>
+                <div class="item">
+                    <span>gellish op nagels</span>
+                    <span class="prijs">&euro;30</span>
+                </div>
+            </div>
+
+            <div class="categorie">
+                <h2>MANICURE</h2>
+                <div class="item">
+                    <span>Manicure</span>
+                    <span class="prijs">&euro;20</span>
+                </div>
+                <div class="item">
+                    <span>lakken van de nagels</span>
+                    <span class="prijs">&euro;10</span>
+                </div>
+                <div class="item">
+                    <span>gellish op de nagels</span>
+                    <span class="prijs">&euro;10</span>
+                </div>
+                <div class="item">
+                    <span>gellish verwijderen + manicure</span>
+                    <span class="prijs">&euro;25</span>
+                </div>
+                <div class="item">
+                    <span>Nieuwe set gelnagels op de natuurlijke nagel</span>
+                    <span class="prijs">&euro;45</span>
+                </div>
+                <div class="item">
+                    <span>Nieuwe set gelnagels met verlenging</span>
+                    <span class="prijs">&euro;50</span>
+                </div>
+                <div class="item">
+                    <span>Bijwerking gelnagels</span>
+                    <span class="prijs">&euro;45</span>
+                </div>
+                <div class="item">
+                    <span>Verwijderen gelnagels + manicure</span>
+                    <span class="prijs">&euro;30</span>
+                </div>
+                <div class="item">
+                    <span>+ French / babyboom</span>
+                    <span class="prijs">&euro;5</span>
+                </div>
+                <div class="item">
+                    <span>+ Nail art</span>
+                    <span class="prijs">&euro;5-10</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Boeking -->
+    <section id="booking" class="section">
+        <h2>Boek een Afspraak</h2>
+        <form id="booking-form" class="booking-form">
+            <label for="name">Naam:</label>
+            <input type="text" id="name" name="name" placeholder="Uw naam" required>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" placeholder="Uw e-mail" required>
+            <label for="service">Dienst:</label>
+            <select id="service" name="service" required>
+                <option value="facial">Gezichtsbehandeling</option>
+                <option value="massage">Massage</option>
+                <option value="manicure">Manicure & Pedicure</option>
+            </select>
+            <label for="date">Datum:</label>
+            <input type="date" id="date" name="date" required>
+            <button type="submit">Verzend</button>
+        </form>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+        <h2>Contact</h2>
+        <div>Heeft u vragen? Neem gerust contact met ons op via:</div>
+        <div>E-mail: info@neuville.com</div>
+        <div>Telefoon: 012-3456789</div>
+    </section>
+
+    <!-- Locatie -->
+    <section id="map" class="section">
+        <h2>Onze Locatie</h2>
+        <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2504.2301608040366!2d3.05889031811636!3d51.12266248030601!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c34d7f295043e7%3A0xb879bbb3ab8f99cd!2sInstituut%20Neuville!5e0!3m2!1snl!2sbe!4v1735397743128!5m2!1snl!2sbe" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>           
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Elegance Schoonheidssalon. Alle rechten voorbehouden.</p>
+        <div class="social-icons">
+            <a href="#"><img src="img/facebook-icon.png" alt="Facebook"></a>
+            <a href="#"><img src="img/instagram-icon.png" alt="Instagram"></a>
+        </div>
+    </footer>
+</body>
+</html>
