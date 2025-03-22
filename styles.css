@@ -1,21 +1,3 @@
-/* Algemene instellingen */
-
-/* Voor mobiele schermen */
-@media (max-width: 768px) {
-    body {
-        font-size: 14px;
-    }
-
-    .container {
-        padding: 10px;
-    }
-
-    .menu {
-        display: flex;
-        flex-direction: column;
-    }
-}
-
 body {
     margin: 0;
     padding: 0;
@@ -50,21 +32,54 @@ button {
 }
 
 .hero-image {
-    max-height: 800px; /* Beperk de hoogte tot 400px */
+    max-height: 400px; /* Beperk de hoogte tot 800px */
     width: auto; /* Schaal de breedte automatisch */
     display: block;
     margin: 0 auto;
 }
 
-.cta-button {
-    position: absolute;
-    top: 75%; /* Plaats de knop in het midden */
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
+.hero-slider {
+    position: relative;
+    overflow: hidden;
+    width: 80%; /* Maak de breedte van de slider kleiner (80% van het scherm) */
+    height: 400px; /* Verhoog de hoogte van de slider */
+    margin: 0 auto; /* Centreer de slider */
 }
 
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: opacity 1s ease-in-out;
+    opacity: 0; /* Start met onzichtbare slides */
+}
 
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Zorg ervoor dat de afbeelding goed schaalt */
+}
+
+.cta-button {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background: rgb(197, 12, 55);
+    color: white;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background: rgb(146, 16, 46);
+    box-shadow: 0 4px 8px rgb(253, 207, 218);
+}
+
+/* Navigatiebalk */
 /* Navigatiebalk */
 .navbar {
     position: fixed;
@@ -77,16 +92,6 @@ button {
     background: rgb(253, 207, 218);
     padding: 15px 20px;
     z-index: 100;
-    font-size: 1.1em;
-}
-
-.navbar .logo {
-    font-size: 2rem; /* Grotere lettergrootte voor meer impact */
-    font-family: 'Playfair Display', serif; /* Elegant lettertype */
-    font-weight: bold; /* Maak de tekst dikker voor meer aanwezigheid */
-    color: #f8f8f8; /* Lichtgrijze kleur voor een subtiele uitstraling */
-    letter-spacing: 1px; /* Vergroot de letterafstand voor een luchtigere uitstraling */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Voeg een subtiele schaduw toe */
 }
 
 .nav-links {
@@ -104,6 +109,67 @@ button {
 
 .nav-links li a:hover {
     color: #a67c52;
+}
+
+/* Media Queries voor responsiviteit */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: rgb(253, 207, 218);
+        text-align: center;
+        padding: 10px 0;
+    }
+    
+    .nav-links.active {
+        display: flex;
+    }
+    
+    .menu-toggle {
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    .cta-button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 500px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .gallery {
+        grid-template-columns: 1fr;
+    }
 }
 
 .hero h1 {
@@ -223,7 +289,76 @@ button {
 #contact div {
     margin-bottom: 10px; /* Zorg voor ruimte tussen de divs */
 }
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Dynamisch aantal kolommen */
+    gap: 15px;
+    padding: 20px;
+    margin-top: 50px; /* Ruimte boven de galerij */
+}
 
+.gallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05); /* Vergroot de afbeelding als je erop hovert */
+}
+/* Stijl voor het modale venster */
+/* De overlay voor de modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparante zwarte achtergrond */
+}
+
+/* Modal content */
+.modal-content {
+    margin: 10% auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    position: relative;
+    max-width: 90%;
+    max-height: 80%;
+}
+
+/* Afbeelding in de modal */
+#modalImage {
+    width: 60%;  /* Verklein de afbeelding naar 60% van de breedte van de modal */
+    max-width: 500px; /* Maximaliseer de breedte tot 500px */
+    height: auto;
+    margin: auto;
+    display: block;
+}
+
+/* Sluitknop van de modal */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
 /* Locatie sectie */
 #map iframe {
     width: 100%;
@@ -274,4 +409,65 @@ button {
 .services-table tr:hover {
     background-color: #f1f1f1;
     cursor: pointer;
+}
+
+/* Media Queries voor responsiviteit */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: rgb(253, 207, 218);
+        text-align: center;
+        padding: 10px 0;
+    }
+    
+    .nav-links.active {
+        display: flex;
+    }
+    
+    .menu-toggle {
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    .cta-button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 500px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .gallery {
+        grid-template-columns: 1fr;
+    }
 }
