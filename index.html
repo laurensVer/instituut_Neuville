@@ -79,6 +79,7 @@
     <!-- Navigatie -->
     <nav class="navbar">
         <div class="logo">Instituut Neuville</div>
+        <div class="menu-toggle">&#9776;</div> <!-- Hamburger icoon -->
         <ul class="nav-links">
             <li><a href="#about">Over Ons</a></li>
             <li><a href="#services">Diensten</a></li>
@@ -89,7 +90,23 @@
 
     <!-- Hero -->
     <header class="hero">
-        <img src="img/instutuut neuville.jpg" alt="Hero Afbeelding" class="hero-image">
+        <div class="hero-slider">
+            <div class="slide">
+                <img src="img/neuville.jpg" alt="Sfeerfoto 1">
+            </div>
+            <div class="slide">
+                <img src="img/sfeerbeeld1.jpg" alt="Sfeerfoto 2">
+            </div>
+            <div class="slide">
+                <img src="img/neuville.jpg" alt="Sfeerfoto 1">
+            </div>
+            <div class="slide">
+                <img src="img/nagels2.jpg" alt="Sfeerfoto 3">
+            </div>
+            <div class="slide">
+                <img src="img/neuville.jpg" alt="Sfeerfoto 1">
+            </div>
+        </div>
         <a href="#services" class="cta-button">Bekijk Onze Diensten</a>
     </header>
 
@@ -301,6 +318,23 @@
             <button type="submit">Verzend</button>
         </form>
     </section>
+
+    <!-- Galerij Sectie -->
+    <section id="gallery" class="section">
+        <h2>Sfeerimpressie</h2>
+        <div class="gallery">
+            <img src="img/nagels1.jpg" alt="Sfeerfoto 1">
+            <img src="img/nagels2.jpg" alt="Sfeerfoto 2">
+            <img src="img/nagels3.jpg" alt="Sfeerfoto 3">
+            <img src="img/sfeerbeeld2.jpg" alt="Sfeerfoto 4">
+        </div>
+    </section>
+    <!-- Modal voor vergroting van afbeeldingen -->
+<div id="imageModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImage">
+    <div id="caption"></div>
+</div>
 
     <!-- Contact -->
     <section id="contact" class="section">
